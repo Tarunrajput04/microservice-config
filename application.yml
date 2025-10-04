@@ -1,9 +1,9 @@
 eureka:
   instance:
-    prefer-ip-address: true       # always use IP instead of hostname
-    ip-address: 127.0.0.1        # force localhost (or your machine IP)
-    hostname: localhost          # explicitly set hostname
-    instance-id: ${spring.application.name}:${server.port}  # optional, avoid auto hostname
+    prefer-ip-address: true          # always use IP instead of hostname
+    ip-address: 127.0.0.1            # force localhost IP
+    hostname: localhost              # fallback hostname
+    instance-id: ${spring.application.name}:${server.port}  # unique ID
 
   client:
     fetch-registry: true
